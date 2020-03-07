@@ -17,7 +17,11 @@
                     </div>
                 </transition>
 
-                <transition name="fade" appear>
+                <transition
+                        appear
+                        enter-active-class="animated bounce"
+                        leave-active-class="animated shake"
+                >
                     <div class="alert alert-info mt-3" v-if="show">
                         This ia an Info Alert!
                     </div>
