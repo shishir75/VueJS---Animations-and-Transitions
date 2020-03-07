@@ -17,6 +17,12 @@
                     </div>
                 </transition>
 
+                <transition name="fade" appear>
+                    <div class="alert alert-info mt-3" v-if="show">
+                        This ia an Info Alert!
+                    </div>
+                </transition>
+
             </div>
         </div>
 
@@ -29,7 +35,7 @@ export default {
     name: 'App',
     data() {
         return {
-            show: false
+            show: true
         }
     }
 
