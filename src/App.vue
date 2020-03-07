@@ -11,7 +11,7 @@
                     </div>
                 </transition>
 
-                <transition name="slide" type="animation">
+                <transition name="slide" type="animation" appear>
                     <div class="alert alert-info mt-3" v-if="show">
                         This ia an Info Alert!
                     </div>
