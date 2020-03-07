@@ -11,7 +11,7 @@
                     </div>
                 </transition>
 
-                <transition name="slide">
+                <transition name="slide" type="animation">
                     <div class="alert alert-info mt-3" v-if="show">
                         This ia an Info Alert!
                     </div>
@@ -53,16 +53,19 @@ export default {
     }
 
     .slide-enter {
-
+        opacity: 0;
     }
     .slide-enter-active {
         animation: slide-in 1s ease-out forwards;
+        transition: opacity 0.5s;
     }
     .slide-leave {
 
     }
     .slide-leave-active {
         animation: slide-out 1s ease-out forwards;
+        transition: opacity 3s;
+        opacity: 0;
     }
 
     @keyframes slide-in {
