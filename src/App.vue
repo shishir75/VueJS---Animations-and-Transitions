@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col0-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3">
+                <h1>Animations</h1>
+                <hr>
+                <button class="btn btn-primary" @click="show = !show">Show Alert</button>
+                <transition>
+                    <div class="alert alert-info mt-3" v-if="show">
+                        This ia an Info Alert!
+                    </div>
+                </transition>
+
+            </div>
+        </div>
+
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    name: 'App',
+    data() {
+        return {
+            show: false
+        }
+    }
+
+
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
