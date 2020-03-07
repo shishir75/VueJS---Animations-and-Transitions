@@ -5,7 +5,7 @@
                 <h1>Animations</h1>
                 <hr>
                 <button class="btn btn-primary" @click="show = !show">Show Alert</button>
-                <transition>
+                <transition name="fade">
                     <div class="alert alert-info mt-3" v-if="show">
                         This ia an Info Alert!
                     </div>
@@ -32,5 +32,16 @@ export default {
 </script>
 
 <style>
+    .fade-enter {
 
+    }
+    .fade-enter-active {
+
+    }
+    .fade-leave {
+
+    }
+    .fade-leave-active {
+
+    }
 </style>
